@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t DanHV/docker-react -f Dockerfile.dev .
+  - docker build -t danhv/docker-react -f Dockerfile.dev .
 
 script:
   - docker run danhv/docker-react npm run test -- --coverage
