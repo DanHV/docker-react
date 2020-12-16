@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t DanHV/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run DanHV/docker-react npm run test -- --coverage
